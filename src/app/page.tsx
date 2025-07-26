@@ -44,7 +44,7 @@ export default function Home() {
       <div
         ref={scrollRef}
         className="w-full h-screen overflow-auto scroll-smooth snap-y snap-mandatory scrollbar-thin"
-        onScroll={() => setScrolled(scrollRef.current?.scrollTop! > 50)}
+        onScroll={() => setScrolled((scrollRef.current?.scrollTop ?? 0) > 50)}
       >
         {/* Scrollable snap content */}
         <div id="LandingPage" className="section">
