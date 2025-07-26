@@ -13,7 +13,7 @@ export default function About() {
     <div className="snap-start w-full h-screen flex items-center bg-[#f5f5f5] ">
       <div className="w-full flex flex-col h-screen">
         <h1 className="text-[#000000] font-extrabold text-6xl w-[300px] ml-[120px] mt-[120px]">
-          Design
+          Designing
         </h1>
         <p className="font-sans text-gray-700 text-sm leading-loose font-semibold w-[400px] md:w-[300px] lg:w-[450px] mt-4 ml-[120px] text-start">
           I may not be a traditional designer sketching wireframes or pushing
