@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.animated-scrollbar::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+.animated-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4831d4 !important;
+  animation: circleScroll 2s infinite !important;
+}
+
+.animated-scrollbar::-webkit-scrollbar-track {
+  background-color: #f4f4f4 !important;
+}
+
+.custom-placeholder::placeholder {
+  color: #3d155f;
+  font-weight: 100;
+  letter-spacing:1px;
+  font-size: 13px;
+}
+
+.custom-border {
+ 
+  height: 60%;
+  border-right: 2px solid black; /* Adjust thickness and color */
+}
