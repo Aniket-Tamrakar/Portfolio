@@ -6,6 +6,7 @@ import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import Projects from "./components/Projects";
+import CustomScollbar from "./components/CustomScollbar";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -41,9 +42,10 @@ export default function Home() {
   return (
     <div id="container">
       <Navbar scrolled={scrolled} activeSection={activeSection} />
+      <CustomScollbar activeSection={activeSection} setActiveSection={setActiveSection}/>
       <div
         ref={scrollRef}
-        className="w-full h-screen overflow-auto scroll-smooth snap-y snap-mandatory scrollbar-thin"
+        className="w-full h-screen overflow-auto scroll-smooth snap-y snap-mandatory scrollbar-hide"
         onScroll={() => setScrolled((scrollRef.current?.scrollTop ?? 0) > 50)}
       >
         {/* Scrollable snap content */}
