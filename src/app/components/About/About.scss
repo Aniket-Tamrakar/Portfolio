@@ -66,5 +66,37 @@
    
 }
 
+@media (max-width: 1200px) {
+    .content-wrapper {
+        gap:60px
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        padding:120px;
+        .content-wrapper{
+            .first-about-content{
+                .about-title{
+                    font-size: 40px;
+                }
+                .about-description{
+                    font-size: 11px;
+                }
+            }
+            .second-about-content{
+               .about-title{
+                font-size: 40px;
+               }
+               .about-description{
+                font-size: 11px;
+               }
+            }
+        }
+    }
+
+}
+
+
 
 

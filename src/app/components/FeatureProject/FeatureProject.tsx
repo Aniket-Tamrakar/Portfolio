@@ -1,10 +1,33 @@
 import React from "react";
 import "./FeatureProject.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 export default function FeatureProject() {
+  const slideUpVariants = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
   return (
     <div className="feature-project-container">
-      <div className="feature-project-content-wrapper">
+      <motion.div 
+        className="feature-project-content-wrapper"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="feature-project-title-wrapper">
           <h1
             className="feature-project-title"
@@ -25,7 +48,7 @@ export default function FeatureProject() {
             relevant market insights.
           </p>
           <p className="feature-project-description">
-            As a frontend developer, I contributed to improving the platform’s
+            As a frontend developer, I contributed to improving the platform&apos;s
             usability by &nbsp;
             <span>
               redesigning the App Selector, resizable modals, pricing modals,
@@ -38,8 +61,15 @@ export default function FeatureProject() {
               system.
           </p>
         </div>
-      </div>
-      <div className="feature-project-image-container" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+      </motion.div>
+      <motion.div 
+        className="feature-project-image-container"
+        variants={slideUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}
+      >
         <Image
           src="/PiqSuite.webp"
           alt="haster_gym"
@@ -48,7 +78,7 @@ export default function FeatureProject() {
           height={1000}
         />
         <div className="project-link" onClick={() => window.open("https://www.piqsuite.com", "_blank")}>www.piqsuite.com</div>
-      </div>
+      </motion.div>
     </div>
   );
 }

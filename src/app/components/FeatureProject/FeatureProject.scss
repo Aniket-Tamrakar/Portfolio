@@ -72,3 +72,34 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+    .feature-project-container {
+        gap:5px;
+        padding:30px 120px;
+        .feature-project-content-wrapper{
+            .feature-project-title-wrapper{
+                .feature-project-title{
+                    font-size: 40px;
+                }
+                .underline{
+                    bottom: 15px;
+                }
+            
+            }
+            .feature-project-description-wrapper{
+                .feature-project-description{
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .feature-project-image-container{
+            .project-link{
+                font-size: 11px;
+            }
+        }
+    }
+
+}
+
