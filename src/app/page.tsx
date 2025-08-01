@@ -1,12 +1,13 @@
 "use client";
-import About from "./components/About";
+// import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
 import { useState, useEffect, useRef } from "react";
-import Projects from "./components/Projects";
 import CustomScollbar from "./components/CustomScollbar";
+import About from "./components/About/About";
+import FeatureProject from "./components/FeatureProject/FeatureProject";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -56,7 +57,7 @@ export default function Home() {
           <About />
         </div>
         <div id="Project" className="section">
-          <Projects />
+          <FeatureProject />
         </div>
         <div id="Contact" className="section">
           <Contact />

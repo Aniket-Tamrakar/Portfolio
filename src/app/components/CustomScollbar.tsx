@@ -26,10 +26,7 @@ export default function CustomScollbar({
       id: 4,
       label: "Contact",
     },
-    {
-      id: 5,
-      label: "Footer",
-    },
+  
   ];
 
   console.log(activeSection);
@@ -57,7 +54,7 @@ export default function CustomScollbar({
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className="w-3 rounded-full mt-3"
+                className={`w-3 rounded-full mt-3 ${activeSection === "Footer" ? "opacity-0" : "opacity-100"}`}
               />
             ) : (
               <motion.div
@@ -71,7 +68,7 @@ export default function CustomScollbar({
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className="w-3 rounded-full mt-3 cursor-pointer"
+                className={`w-3 rounded-full mt-3 cursor-pointer ${activeSection === "Footer"? "opacity-0" : "opacity-100"}`}
                 onClick={()=>{
                   setActiveSection(item.label);
                   scrollToSection(item.label);
