@@ -1,14 +1,13 @@
 "use client";
 // import About from "./components/About";
-import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import CustomScollbar from "./components/CustomScollbar";
 import About from "./components/About/About";
 import FeatureProject from "./components/FeatureProject/FeatureProject";
-import Contact2 from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 export default function Home() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("LandingPage");
@@ -43,7 +42,10 @@ export default function Home() {
   return (
     <div id="container">
       <Navbar scrolled={scrolled} activeSection={activeSection} />
-      <CustomScollbar activeSection={activeSection} setActiveSection={setActiveSection}/>
+      <CustomScollbar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
       <div
         ref={scrollRef}
         className="w-full h-screen overflow-auto scroll-smooth snap-y snap-mandatory scrollbar-hide"
@@ -62,9 +64,8 @@ export default function Home() {
         <div id="Contact" className="section">
           <Contact />
         </div>
-        <div id="Contact" className="section">
-          <Contact2 />
-          {/* <Footer /> */}
+        <div id="Footer" className="section">
+          <Footer />
         </div>
       </div>
     </div>

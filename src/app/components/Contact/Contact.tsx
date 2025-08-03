@@ -16,7 +16,11 @@ export default function Contact() {
                 <label className="label" htmlFor="name">
                   Name
                 </label>
-                <input type="text" placeholder="Enter your name" className="input-field" />
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="input-field"
+                />
               </div>
               <div className="email-input-wrapper">
                 <label className="label" htmlFor="email">
@@ -32,7 +36,13 @@ export default function Contact() {
             <label className="message-label" htmlFor="message">
               Message
             </label>
-            <input type="text" placeholder="Enter your message" className="input-field" />
+            <textarea
+              placeholder="Enter your message"
+              className="textarea-field"
+            />
+            <button type="submit" className="submit-button">
+              SAY HELLO
+            </button>
           </div>
         </div>
       </div>
