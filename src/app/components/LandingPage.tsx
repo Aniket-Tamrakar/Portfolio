@@ -50,20 +50,7 @@ export default function LandingPage() {
       </div>
       <div className=" w-full h-full flex justify-center items-center bg-[#dee6e8]">
         <Image src='/aniket.png' width={550} height={100} alt="aniket_pixel" className="rounded-full mb-5  border border-none "/>
-        {/* <div className="relative w-full h-[400px] "> */}
-          {/* <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-            <ReorderingShapes />
-          </div> */}
-
-          {/* <div className="absolute bottom-0 -right-3 sm:right-5 md:right-10 lg:right-20 top-8">
-            <Image
-              src="/pngwing.com.png"
-              alt="pngwing"
-              width={200}
-              height={150}
-            />
-          </div> */}
-        {/* </div> */}
+      
       </div>
     </div>
   );

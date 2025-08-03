@@ -1,14 +1,14 @@
 "use client";
 // import About from "./components/About";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import CustomScollbar from "./components/CustomScollbar";
 import About from "./components/About/About";
 import FeatureProject from "./components/FeatureProject/FeatureProject";
-
+import Contact2 from "./components/Contact/Contact";
 export default function Home() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("LandingPage");
@@ -62,8 +62,9 @@ export default function Home() {
         <div id="Contact" className="section">
           <Contact />
         </div>
-        <div id="Footer" className="section">
-          <Footer />
+        <div id="Contact" className="section">
+          <Contact2 />
+          {/* <Footer /> */}
         </div>
       </div>
     </div>
